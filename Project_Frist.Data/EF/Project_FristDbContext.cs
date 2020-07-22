@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Project_Frist.Data.Entities;
+using Project_Frist.Data.Configurations;
 
 namespace Project_Frist.Data.EF
 {
@@ -12,6 +13,12 @@ namespace Project_Frist.Data.EF
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+            modelBuilder.ApplyConfiguration(new CartConfiguration());
+            /*base.OnModelCreating(modelBuilder);*/
+        }
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Category> Categories { get; set; }
