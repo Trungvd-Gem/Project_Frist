@@ -6,6 +6,8 @@ namespace Project_Frist.Data.Entities
 {
     public class CategoryTranslation
     {
+       
+
         public int Id { set; get; }
         public int CategoryId { set; get; }
         public string Name { set; get; }
