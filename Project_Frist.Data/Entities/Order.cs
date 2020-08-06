@@ -21,5 +21,6 @@ namespace Project_Frist.Data.Entities
         public List<OrderDetail> OrderDetails { get; set; }
 
 
+
     }
 }
