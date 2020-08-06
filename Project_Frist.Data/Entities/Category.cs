@@ -18,5 +18,6 @@ namespace Project_Frist.Data.Entities
         public List<CategoryTranslation> CategoryTranslations { get; set; }
 
 
+       
     }
 }

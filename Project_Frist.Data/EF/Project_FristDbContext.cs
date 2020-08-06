@@ -25,15 +25,12 @@ namespace Project_Frist.Data.EF
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
-            modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new PromotionConfiguration());
 
-
-
-
-
-
-
+            
 
 
             /*base.OnModelCreating(modelBuilder);*/
@@ -62,6 +59,8 @@ namespace Project_Frist.Data.EF
 
 
         public DbSet<Transaction> Transactions { get; set; }
+
+        public DbSet<ProductInCategory> ProductInCategories { get; set; }
 
 
     }
