@@ -14,6 +14,9 @@ namespace Project_Frist.Data.Entities
         public int? ParentId { get; set; }
 
         public Status Status { get; set; }
-        public object CategoryTranslations { get; internal set; }
+        public List<ProductInCategory> ProductInCategories { get; set; }
+        public List<CategoryTranslation> CategoryTranslations { get; set; }
+
+
     }
 }

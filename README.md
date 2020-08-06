@@ -11,4 +11,6 @@
 ## Youtube tutorial 
 ## How to configure and run
 ## How to contribute 
+- attribule configuration [Table"Product"]
+- Fluent API configuration ( dùng cho project này )
 ## How to do it?
