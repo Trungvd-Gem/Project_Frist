@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Project_Frist.Data.Entities;
 using Project_Frist.Data.Configurations;
+using Project_Frist.Data.Extensions;
 
 namespace Project_Frist.Data.EF
 {
@@ -11,11 +12,12 @@ namespace Project_Frist.Data.EF
     {
         public Project_FristDbContext( DbContextOptions options) : base(options)
         {
-            // kế thừa DbContext 
+             
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        {   
+            // configuration using Fluent API
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
@@ -30,8 +32,8 @@ namespace Project_Frist.Data.EF
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
 
-            
-
+            // data seeding
+            modelBuilder.Seed();
 
             /*base.OnModelCreating(modelBuilder);*/
         }
