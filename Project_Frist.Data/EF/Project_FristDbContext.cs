@@ -5,10 +5,12 @@ using System.Text;
 using Project_Frist.Data.Entities;
 using Project_Frist.Data.Configurations;
 using Project_Frist.Data.Extensions;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace Project_Frist.Data.EF
 {
-    public class Project_FristDbContext : DbContext
+    public class Project_FristDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public Project_FristDbContext( DbContextOptions options) : base(options)
         {
@@ -31,6 +33,13 @@ namespace Project_Frist.Data.EF
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
+
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());    
+
+            modelBuilder.Entity < IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
+
+
 
             // data seeding
             modelBuilder.Seed();
