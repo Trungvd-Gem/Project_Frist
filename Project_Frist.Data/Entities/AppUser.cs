@@ -5,10 +5,21 @@ using System.Text;
 
 namespace Project_Frist.Data.Entities
 {
-    public class AppUser:IdentityUser<Guid>
+    public class AppUser: IdentityUser<Guid>
     {
-        public string FristName { get; set; }
+        public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public DateTime Dob { get; set; }
+
+        public List<Cart> Carts { get; set; }
+
+        public List<Order> Orders { get; set; }
+
+        public List<Transaction> Transactions { get; set; }
+
+
+
     }
 }
