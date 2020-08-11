@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Project_Frist.Data\Project_Frist.Data.csproj" />
+    <ProjectReference Include="..\Project_Frist.Utilities\Project_Frist.Utilities.csproj" />
+    <ProjectReference Include="..\Project_Frist.ViewModels\Project_Frist.ViewModels.csproj" />
+  </ItemGroup>
 
 </Project>
