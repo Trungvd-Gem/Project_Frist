@@ -14,7 +14,7 @@ using System.Linq;
 
 namespace Project_Frist.Application.Catalog.Products
 {
-    public class ManageProductService : IManageProductService
+    public class ManageProductService :IManageProductService
     {
         private readonly Project_FristDbContext _context;
 
