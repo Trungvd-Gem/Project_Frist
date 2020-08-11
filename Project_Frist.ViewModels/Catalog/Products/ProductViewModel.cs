@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project_Frist.Application.Catalog.Products.Dtos
+namespace Project_Frist.ViewModels.Catalog.Products
 {
     public class ProductViewModel
     {

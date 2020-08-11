@@ -1,9 +1,5 @@
-﻿using Project_Frist.Application.Catalog.Products.Dtos;
-using Project_Frist.Application.Catalog.Products.Dtos.Manage;
-using Project_Frist.Application.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Project_Frist.ViewModels.Catalog.Products;
+using Project_Frist.ViewModels.Common;
 using System.Threading.Tasks;
 
 namespace Project_Frist.Application.Catalog.Products

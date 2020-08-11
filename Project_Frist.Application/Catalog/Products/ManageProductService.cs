@@ -1,16 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Project_Frist.Application.Catalog.Products.Dtos;
-using Project_Frist.Application.Catalog.Products.Dtos.Manage;
-using Project_Frist.Application.Dtos;
 using Project_Frist.Data.EF;
 using Project_Frist.Data.Entities;
 using Project_Frist.Utilities.Exceptions;
 using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
+using Project_Frist.ViewModels.Catalog.Products;
+using Project_Frist.ViewModels.Common;
 
 namespace Project_Frist.Application.Catalog.Products
 {

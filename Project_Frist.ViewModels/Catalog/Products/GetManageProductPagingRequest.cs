@@ -1,9 +1,9 @@
-﻿using Project_Frist.Application.Dtos;
+﻿using Project_Frist.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project_Frist.Application.Catalog.Products.Dtos.Manage
+namespace Project_Frist.ViewModels.Catalog.Products
 {
     public class GetManageProductPagingRequest : PagingRequestBase
     {

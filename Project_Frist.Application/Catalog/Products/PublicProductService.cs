@@ -1,13 +1,11 @@
-﻿using Project_Frist.Application.Catalog.Products.Dtos;
-using Project_Frist.Application.Catalog.Products.Dtos.Public;
-using Project_Frist.Application.Dtos;
-using Project_Frist.Data.EF;
-using System;
+﻿using Project_Frist.Data.EF;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Project_Frist.ViewModels.Catalog.Products;
+using Project_Frist.ViewModels.Common;
+
 
 namespace Project_Frist.Application.Catalog.Products
 {
