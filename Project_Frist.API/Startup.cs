@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -19,6 +20,7 @@ using Project_Frist.Application.Catalog.Products;
 using Project_Frist.Application.System.Users;
 using Project_Frist.Data.EF;
 using Project_Frist.Data.Entities;
+using Project_Frist.ViewModels.System.Users;
 
 namespace Project_Frist.API
 {
@@ -50,8 +52,8 @@ namespace Project_Frist.API
             services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
             services.AddTransient<IUserService, UserService>();
 
-            //services.AddTransient<IValidator<LoginRequest>, LoginRequestValidator>();
-            //services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();
+            /* services.AddTransient<IValidator<LoginRequest>, LoginRequestValidator>();
+             services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();*/
             services.AddControllers()
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
 
