@@ -1,9 +1,5 @@
-﻿using Project_Frist.Application.Catalog.Products.Dtos;
-using Project_Frist.Application.Catalog.Products.Dtos.Manage;
-using Project_Frist.Application.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Project_Frist.ViewModels.Catalog.Products;
+using Project_Frist.ViewModels.Common;
 using System.Threading.Tasks;
 
 namespace Project_Frist.Application.Catalog.Products
@@ -13,6 +9,8 @@ namespace Project_Frist.Application.Catalog.Products
         Task<int> Create(ProductCreateRequest request);
         Task<int> Update(ProductUpdateRequest request);
         Task<int> Delete(int productId);
+        Task<ProductViewModel> GetById(int productId, string languageId);
+
         Task<bool> UpdatePrice(int productId, decimal newPrice);
         Task<bool> UpdateStock(int productId, int addedQuantity);
 

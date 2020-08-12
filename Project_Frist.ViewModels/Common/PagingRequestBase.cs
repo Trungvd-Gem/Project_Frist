@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project_Frist.Application.Dtos
+namespace Project_Frist.ViewModels.Common
 {
     public class PagingRequestBase
     {
