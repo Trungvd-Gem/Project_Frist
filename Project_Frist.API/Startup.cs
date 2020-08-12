@@ -30,7 +30,9 @@ namespace Project_Frist.API
         {
             services.AddDbContext<Project_FristDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("eShopSolutionDb")));
-            services.AddTransient<IPublicProductService, PublicProductService>();   
+            services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService, ManageProductService>();
+
             services.AddControllersWithViews();
 
             services.AddSwaggerGen(c =>
