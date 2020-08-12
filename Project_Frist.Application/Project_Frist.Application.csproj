@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.7.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Project_Frist.Data\Project_Frist.Data.csproj" />
     <ProjectReference Include="..\Project_Frist.Utilities\Project_Frist.Utilities.csproj" />
     <ProjectReference Include="..\Project_Frist.ViewModels\Project_Frist.ViewModels.csproj" />
