@@ -12,7 +12,7 @@ namespace Project_Frist.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -24,23 +24,23 @@ namespace Project_Frist.API.Controllers
 
         [HttpPost("authenticate")]
         [AllowAnonymous]
-        public async Task<IActionResult> Authenticate([FromForm] LoginRequest request)
+        public async Task<IActionResult> Authenticate([FromBody] LoginRequest request)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var resultToken = await _userService.Authencate(request);
-
             if (string.IsNullOrEmpty(resultToken))
             {
-                return BadRequest("Username or password is iscorrect ");
+                return BadRequest("Username or password is incorrect.");
             }
-            return Ok(new { token = resultToken });
+            return Ok(resultToken);
         }
+
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Register([FromForm] RegisterRequest request)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest request)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
